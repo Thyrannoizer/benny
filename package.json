@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "http-proxy-middleware": "^2.0.1",
     "next": "11.0.1",
     "prettier": "^2.3.2",
     "react": "17.0.2",

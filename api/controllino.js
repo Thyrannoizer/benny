@@ -1,6 +1,6 @@
 async function fetchControllinoData() {
     return fetch(
-        "/get-ring-times",
+        "http://localhost:8081/api/get-ring-times",
         {
             method: 'GET',
             headers: {
@@ -10,7 +10,7 @@ async function fetchControllinoData() {
     ).then((response) => response.json());
 }
 
-const extractData = fetchResponse => fetchResponse.data;
+const extractData = fetchResponse => fetchResponse;
 
 export const fetchRingTimesData = async () => {
     const data = await fetchControllinoData();

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { GetServerSideProps } from 'next';
 import { fetchRingTimesData } from '../api/controllino';
 
@@ -44,7 +44,7 @@ const Index: React.FC<RingTimes> = ({}): JSX.Element => {
         });
 
         if (result.ok) {
-            setRingTimes(result.json());
+            // setRingTimes(result.json());
         } else {
             setError('etwas ist schief gelaufen');
         }
@@ -53,7 +53,7 @@ const Index: React.FC<RingTimes> = ({}): JSX.Element => {
     };
 
     const handleRingTimeDelete = async (id: number) => {
-        const result = await fetch('/delete-ring-time', {
+        const result = await fetch('api/delete-ring-time', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
