@@ -79,7 +79,7 @@ const Index: React.FC<RingTimes> = ({}): JSX.Element => {
                 <div className="ring-times-box">
                     <h2>Läutezeiten</h2>
                     {ringTimes.map((timeField, idx) => (
-                        <div className="time-field-wrapper">
+                        <div key={idx} className="time-field-wrapper">
                             <div
                                 className={`time-field ${activeRingTime?.id === timeField?.id ? 'active' : ''}`}
                                 key={idx}
